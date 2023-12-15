@@ -1,0 +1,56 @@
+
+local notification = Instance.new("Sound")
+notification.Parent = game:GetService("SoundService")
+notification.SoundId = "rbxassetid://9086208751"
+notification.Volume = 10
+
+game.StarterGui:SetCore("SendNotification", {
+      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Title = "Ackerman Hub", 
+      Text = "Loading Please Wait!";
+})
+
+if _G.Language == "English" then
+
+  wait(1)
+  game.StarterGui:SetCore("SendNotification", {
+      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Title = "Ackerman Hub", 
+      Text = "Loading Complete";
+notification:Play()
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToTaiVn/EnglishMode/main/TheHubEnglish.lua"))()
+elseif _G.Language == "Vietnamese" then
+  wait(1)
+  game.StarterGui:SetCore("SendNotification", {
+      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Title = "Ackerman Hub", 
+      Text = "Loading Complete";
+notification:Play()
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToTaiVn/VietnameseMode/main/TheHubVietnamese.lua"))()
+end
+
+if game:IsLoaded() then  --Remove Death Effect
+  spawn(function()
+while task.wait() do
+for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"]:GetChildren()) do
+pcall(function()
+ if v.Name == ("CurvedRing") or v.Name == ("SlashHit") or v.Name == ("SwordSlash") or v.Name == ("SlashTail") or v.Name == ("Sounds") then
+ v:Destroy()
+ end
+ end)
+end
+for i,v in pairs(game:GetService("ReplicatedStorage").Effect.Container.Death:GetChildren()) do
+pcall(function()
+ v:Destroy()
+ end)
+end
+for i,v in pairs(game:GetService("ReplicatedStorage").Effect.Container.Respawn:GetChildren()) do
+pcall(function()
+ v:Destroy()
+ end)
+end
+end
+end)
+end
