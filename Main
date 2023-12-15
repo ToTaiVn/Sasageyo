@@ -5,7 +5,7 @@ notification.SoundId = "rbxassetid://9086208751"
 notification.Volume = 10
 
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Icon = "";
       Title = "Ackerman Hub", 
       Text = "Loading Please Wait!";
 })
@@ -14,7 +14,7 @@ if _G.Language == "English" then
 
   wait(1)
   game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Icon = "";
       Title = "Ackerman Hub", 
       Text = "Loading Complete";
 notification:Play()
@@ -23,7 +23,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ToTaiVn/EnglishMode/m
 elseif _G.Language == "Vietnamese" then
   wait(1)
   game.StarterGui:SetCore("SendNotification", {
-      Icon = "http://www.roblox.com/asset/?id=12523036534";
+      Icon = "";
       Title = "Ackerman Hub", 
       Text = "Loading Complete";
 notification:Play()
