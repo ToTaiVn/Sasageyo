@@ -2203,7 +2203,7 @@ end)
         Default = "",
     })
 
-    WeaponList:SetValue("Melee")
+  
 
     DropdownWeapon:OnChanged(function(Value)
         _G.SelectWeapon = Value
